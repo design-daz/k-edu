@@ -642,6 +642,7 @@ Edu Search
 
 .search-box {
     height: 76px;
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .edu-search {
@@ -1076,6 +1077,10 @@ Lecture
 
 
 /* ===== Lecture-Sld =====  */
+
+.lec-box > .col-12 {
+    padding: 5px;
+}
 
 .lec-cnt {
     grid-column: span 3;
@@ -2203,9 +2208,13 @@ Sub page - Lecture video
 
 ::-webkit-scrollbar-thumb {
     /* background-color: #9CA3AF; */
-    background-color: #E5E7EB;
+    /* background-color: #E5E7EB;
     background-color: rgba(0,84,166,0.5);
-    background-color: #00a4b6;
+    background-color: #00a4b6; */
+    background-color: #E0E0E0;
+    /* background-color:  #BDBDBD; */
+
+
     
 
 
