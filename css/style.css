@@ -55,7 +55,7 @@ GENERAL STYLING
 ================================================ */
 
 * {
-/*     outline: 1px solid rgb(223, 63, 35); */
+    /* outline: 1px solid rgb(223, 63, 35); */
     box-sizing: border-box;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 
 .inner {
 
-/*     outline: 1px solid rgb(4, 0, 255); */
+    /* outline: 1px solid rgb(4, 0, 255); */
     max-width: 1400px;
 
     width: 100%;
@@ -410,6 +410,10 @@ header {
     /* padding: 8px 10px; */
 }
 
+.utility ul li a:hover {
+    color: #111827;
+}
+
 
 
 
@@ -682,6 +686,8 @@ input[type="text"] {
 
 }
 
+
+
 input[type="text"]::placeholder {
     color: #9CA3AF;
     font-weight: 500;
@@ -690,26 +696,44 @@ input[type="text"]::placeholder {
 input:focus[type="text"] {
     color: #111827;
     font-weight: 500;
+    /* border: 2px solid #0054A6; */
+
 }
+
+input:focus-visible[type="text"],
+.search-txt:focus-visible{
+    border: 2px solid #0054A6;
+
+    outline: none;
+
+}
+
 
 
 input[type="button"] {
     position: absolute;
 
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
 
-    top: 26px;
+    top: 28px;
     right: 16px;
 
     /* transform: translateY(50%); */
 
-    background-image: url(../images/search.png);
+    background-image: url(../images/search.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 
 }
+
+
+input:focus-visible[type="text"] + input[type="button"] {
+    background-image: url(../images/search-h.svg); 
+
+}
+
 
 
 /*
@@ -761,7 +785,7 @@ Main
 }
 
 .notice-icon {
-    background-image: url(../images/notice-icon.png);
+    background-image: url(../images/notice-icon.svg);
 
     background-position: center;
     background-repeat: no-repeat;
@@ -1006,15 +1030,18 @@ Curriculum
     border-top: 0;
     border-bottom: 0;
 
-    min-height: 192px;
-    max-height: 192px;
+    /* min-height: 192px;
+    max-height: 192px; */
+
+    min-height: 228px;
+    max-height: 228px;
 
 }
 
 .cur-list-box>li {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 24px;
 
     color: #636871;
 
@@ -1055,6 +1082,12 @@ Lecture
 
     border: 1px solid #E5E7EB;
     border-radius: 2px;
+}
+
+.lec-cnt:hover {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04) ,0px 4px 6px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 1); */
+
 }
 
 .lec-cnt>div.flx {
@@ -1253,8 +1286,6 @@ Footer
 }
 
 
-
-
 .footer-link>li {
     padding: 0 11px;
     position: relative;
@@ -1283,6 +1314,10 @@ Footer
     display: none;
 }
 
+.footer-link>li:last-child:hover .rel-site {
+    background-image: url(../images/footer-link-h.svg);
+
+}
 
 .footer-link>li>a {
     display: inline-block;
@@ -1290,6 +1325,9 @@ Footer
     height: 100%;
 }
 
+.footer-link>li>a:hover {
+    color: #fff;
+}
 
 
 
@@ -1354,6 +1392,21 @@ Footer
     margin-right: 16px;
 }
 
+.sns-logo-box>li:first-child:hover{
+    border: 1px solid #ED2123;
+    background-color: #ED2123;
+}
+
+.sns-logo-box>li:nth-child(2):hover{
+    border: 1px solid #1877F2;
+    background-color: #1877F2;
+}
+
+.sns-logo-box>li:last-child:hover{
+    border: 1px solid #50B848;
+    background-color: #50B848;
+}
+
 
 
 .sns-logo-box>li:first-child>a {
@@ -1390,14 +1443,25 @@ Footer
     background-image: url(../images/footer-logo/ytb-02.svg);
 }
 
+.sns-logo-box>li:first-child:hover .youtube-logo {
+    background-image: url(../images/footer-logo/ytb-02-h.svg);
+}
+
 .facebook-logo {
     background-image: url(../images/footer-logo/fb.svg);
+}
+
+.sns-logo-box>li:nth-child(2):hover .facebook-logo{
+    background-image: url(../images/footer-logo/fb-h.svg);
 }
 
 .band-logo {
     background-image: url(../images/footer-logo/bd.svg);
 }
 
+.sns-logo-box>li:last-child:hover .band-logo{
+    background-image: url(../images/footer-logo/bd-h.svg);
+}
 
 
 /* 
@@ -1554,12 +1618,21 @@ ul.location-box>li:last-child {
     color: #0054A6;
 }
 
+.tab-menu-li > li:hover {
+    color: #0054A6;
+    font-weight: 500;
+
+}
+
 
 .vt-line {
     color: #9CA3AF;
 }
 
-
+li.vt-line:hover {
+    color: #9CA3AF;
+    font-weight: 400;
+}
 
 
 
@@ -1715,6 +1788,11 @@ select::-ms-expand {
     border: 1px solid #E5E7EB;
 }
 
+.sub-cnt:hover {
+    border: 1px solid #9CA3AF;
+
+}
+
 .row-g-56 {
     row-gap: 56px;
 }
@@ -1810,7 +1888,7 @@ select::-ms-expand {
 .btn_first {
     margin: 0px 3px;
 
-    background-image: url(../images/pg/double_left_arrow.png);
+    background-image: url(../images/pg/double_left_arrow.svg);
     background-size: 11px 10px;
 
 
@@ -1818,7 +1896,7 @@ select::-ms-expand {
 }
 
 .btn_first:hover {
-    background-image: url(../images/pg/double_left_arrow_h.png);
+    background-image: url(../images/pg/double_left_arrow_h.svg);
 }
 
 .btn_prev {
@@ -1826,23 +1904,24 @@ select::-ms-expand {
     margin-left: 3px;
     margin-right: 29px;
 
-    background-image: url(../images/pg/single_left_arrow.png);
+    background-image: url(../images/pg/single_left_arrow.svg);
 
     background-size: 6px 10px;
 }
 
 .btn_prev:hover {
-    background-image: url(../images/pg/single_left_arrow_h.png);
+    background-image: url(../images/pg/single_left_arrow_h.svg);
 }
 
 .paginate>a:hover {
-    background-color: #ff7e00;
+    background-color: #0054A6;
 }
 
 .num>a {
     /* font-weight: bold; */
 
-    line-height: 22px;
+    line-height: 24px;
+    font-weight: 500;
 
     display: inline-block;
     text-align: center;
@@ -1861,11 +1940,11 @@ select::-ms-expand {
 }
 
 .num>a:hover {
-    color: #ff7e00;
+    color: #0054A6;
 }
 
 .num>a>span.current-page {
-    color: #111827;
+    color: #0054A6;
 }
 
 
@@ -1874,7 +1953,7 @@ select::-ms-expand {
     margin-left: 29px;
     margin-right: 3px;
 
-    background-image: url(../images/pg/single_right_arrow.png);
+    background-image: url(../images/pg/single_right_arrow.svg);
 
     background-size: 6px 10px;
 
@@ -1882,18 +1961,18 @@ select::-ms-expand {
 }
 
 .btn_next:hover {
-    background-image: url(../images/pg/single_right_arrow_h.png)
+    background-image: url(../images/pg/single_right_arrow_h.svg)
 }
 
 .btn_last {
     margin: 0 3px;
 
-    background-image: url(../images/pg/double_right_arrow.png);
+    background-image: url(../images/pg/double_right_arrow.svg);
     background-size: 11px 10px;
 }
 
 .btn_last:hover {
-    background-image: url(../images/pg/double_right_arrow_h.png);
+    background-image: url(../images/pg/double_right_arrow_h.svg);
 }
 
 
@@ -2022,8 +2101,8 @@ Sub page - Lecture video
 .lec-v-btn:hover {
     color: white;
 
-    background-color: #ff7e00;
-    border-color: #ff7e00;
+    background-color: #0054A6;
+    border-color: #0054A6;
 }
 
 
@@ -2123,9 +2202,15 @@ Sub page - Lecture video
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0054A6;
+    /* background-color: #9CA3AF; */
+    background-color: #E5E7EB;
+    background-color: rgba(0,84,166,0.5);
+    background-color: #00a4b6;
+    
+
+
     border-radius: 16px;
-}
+} 
 
 ::-webkit-scrollbar-track {
     background-color: transparent;
