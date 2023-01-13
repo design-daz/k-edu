@@ -55,7 +55,7 @@ GENERAL STYLING
 ================================================ */
 
 * {
-/*     outline: 1px solid rgb(223, 63, 35); */
+    /* outline: 1px solid rgb(223, 63, 35); */
     box-sizing: border-box;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 
 .inner {
 
-/*     outline: 1px solid rgb(4, 0, 255); */
+    /* outline: 1px solid rgb(4, 0, 255); */
     max-width: 1400px;
 
     width: 100%;
@@ -132,6 +132,12 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     /* gap: 20px; */
+}
+
+.col-8-20 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
 }
 
 .col-12 {
@@ -1409,8 +1415,8 @@ Footer
     width: 44px;
     height: 44px;
 
-    border: 1px solid #9CA3AF;
-    border-radius: 50%;
+    /* border: 1px solid #9CA3AF;
+    border-radius: 50%; */
 
 }
 
@@ -1419,7 +1425,7 @@ Footer
     margin-right: 16px;
 }
 
-.sns-logo-box>li:first-child:hover{
+/* .sns-logo-box>li:first-child:hover{
     border: 1px solid #ED2123;
     background-color: #ED2123;
 }
@@ -1432,12 +1438,12 @@ Footer
 .sns-logo-box>li:last-child:hover{
     border: 1px solid #50B848;
     background-color: #50B848;
-}
+} */
 
 
 
 .sns-logo-box>li:first-child>a {
-    padding: 12px 0;
+    /* padding: 12px 0; */
 
 }
 
@@ -1452,7 +1458,7 @@ Footer
     height: 100%;
     width: 100%;
 
-    padding: 10px 0;
+    /* padding: 10px 0; */
 
 
 }
@@ -1466,7 +1472,7 @@ Footer
 }
 
 
-.youtube-logo {
+/* .youtube-logo {
     background-image: url(../images/footer-logo/ytb-02.svg);
 }
 
@@ -1488,6 +1494,30 @@ Footer
 
 .sns-logo-box>li:last-child:hover .band-logo{
     background-image: url(../images/footer-logo/bd-h.svg);
+} */
+
+.youtube-logo {
+    background-image: url(../images/footer-logo/ytb.svg);
+}
+
+.sns-logo-box>li:first-child:hover .youtube-logo {
+    background-image: url(../images/footer-logo/ytb-h.svg);
+}
+
+.facebook-logo {
+    background-image: url(../images/footer-logo/Facebook.svg);
+}
+
+.sns-logo-box>li:nth-child(2):hover .facebook-logo{
+    background-image: url(../images/footer-logo/Facebook-h.svg);
+}
+
+.band-logo {
+    background-image: url(../images/footer-logo/Band.svg);
+}
+
+.sns-logo-box>li:last-child:hover .band-logo{
+    background-image: url(../images/footer-logo/Band-h.svg);
 }
 
 
@@ -2192,24 +2222,35 @@ Sub page - Lecture video
 }
 
 .lec-v-tit.flx {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-direction: column;
+
+    align-items: flex-start;
 }
 
 .lec-v-tit>h4 {
+
+    grid-column: span 5;
+
     margin-top: 24px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 
     text-align: left;
+
 }
 
 .v-num-info.flx {
+    justify-content: flex-end;
     align-self: flex-end;
 }
 
 .v-num-info {
-    padding: 0px 8px 16px;
+    padding: 8px 8px 16px;
 
     color: #636871;
+
+    grid-column: span 3;
+
 }
 
 .v-num-info>p:first-child {
