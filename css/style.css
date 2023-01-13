@@ -55,7 +55,7 @@ GENERAL STYLING
 ================================================ */
 
 * {
-    /* outline: 1px solid rgb(223, 63, 35); */
+    outline: 1px solid rgb(223, 63, 35);
     box-sizing: border-box;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 
 .inner {
 
-    /* outline: 1px solid rgb(4, 0, 255); */
+    outline: 1px solid rgb(4, 0, 255);
     max-width: 1400px;
 
     width: 100%;
@@ -288,6 +288,15 @@ h5 {
 
 }
 
+.primary-color {
+    color: #0054A6;
+}
+
+.grey-600 {
+    color: #636871;
+
+}
+
 
 
 /* 
@@ -315,6 +324,14 @@ header {
     justify-content: space-between;
     height: 100%;
 } */
+
+header.b-shadow {
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.08);   */
+
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04); */
+
+    /* display: none; */
+}
 
 .main-logo {
     grid-column: 1 / span 2;
@@ -1081,7 +1098,7 @@ Lecture
 /* ===== Lecture-Sld =====  */
 
 .lec-box > .col-12 {
-    padding: 5px;
+    padding: 0 5px 5px 5px;
 }
 
 .lec-cnt {
@@ -1184,6 +1201,9 @@ Lecture
 
     margin-top: 72px;
     margin-bottom: 16px;
+
+    padding: 0 5px;
+
 }
 
 
@@ -1705,6 +1725,10 @@ li.vt-line:hover {
     background-size: contain;
 }
 
+.card-btn.list-style>a {
+    background-image: url(../images/card+list-btn/card-btn.svg);
+}
+
 .card-btn {
     margin-right: 6px;
 }
@@ -1716,6 +1740,10 @@ li.vt-line:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.list-btn.list-style>a {
+    background-image: url(../images/card+list-btn/list-btn-on.svg);
 }
 
 
@@ -1783,7 +1811,7 @@ select::-ms-expand {
 
 
 
-/* ===== Sub-cnt-box =====  */
+/* ===== Sub-cnt-box ) card - style =====  */
 
 .sub-cnt-box {
     grid-column: span 12;
@@ -1855,6 +1883,166 @@ select::-ms-expand {
 .sub-cnt-txt>li>span {
     color: #0054A6;
 }
+
+
+
+/* ===== Sub-cnt-box ) list - style =====  */
+
+
+.sub-cnt.list-style {
+    border: 0;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.sub-cnt.list-style > img {
+    grid-column: span 3;
+    padding: 8px;
+    
+}
+
+.sub-cnt.list-style .sub-cnt-r {
+    grid-column: span 9;
+
+    /* border-bottom: 1px solid #E5E7EB; */
+
+    position: relative;
+}
+
+.sub-cnt.list-style .sub-cnt-r::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: calc(100% - 28px);
+    right: 0;
+    height: 1px;
+
+    bottom: -16px;
+
+    background-color: #E5E7EB;
+} 
+
+.sub-cnt.list-style:first-child {
+    padding-top: 0;
+}
+
+.sub-cnt.list-style:last-child .sub-cnt-r::after {
+    display: none;
+} 
+
+.sub-cnt.list-style .sub-cnt-r.flx {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sub-cnt-r .sub-cnt-tit {
+    text-align: left;
+    margin: 0 0;
+
+    /* padding-left: 50px; */
+
+    padding: 0 16px 0 28px;
+}
+
+.sub-cnt-r .sub-cnt-txt{
+    padding: 16px 8px 16px 28px;
+    /* padding-left: 50px; */
+
+    /* position: relative; */
+
+    width: 1045px;
+
+    text-align: left;
+
+}
+
+.sub-cnt-r .sub-cnt-txt.flx {
+    align-items: flex-start;
+
+    justify-content: space-between;
+}
+
+.sub-cnt-r .sub-cnt-txt>li::after {
+    display: none;
+}
+
+
+.sub-cnt-txt-l > ul > li,
+.sub-cnt-txt-r > ul > li {
+    margin-bottom: 4px;
+
+    position: relative;
+}
+
+.sub-cnt-txt-l > ul > li:last-child,
+.sub-cnt-txt-r > ul > li:last-child {
+    margin-bottom: 0px;
+}
+
+
+.sub-cnt-txt-l > ul > li::after
+{
+
+    content: "";
+    display: block;
+
+    position: absolute;
+
+    width: 1px;
+    height: 17px;
+
+    left: 67px;
+    top: 5px;
+
+    background-color: #E5E7EB;
+
+}
+
+
+.sub-cnt-txt-r {
+    min-width: 250px;
+}
+
+
+
+.sub-cnt-txt-l > ul > li > span,
+.sub-cnt-txt-r > ul > li > span {
+
+    position: absolute;
+
+    left: 82px;
+
+    min-width: 100px;
+}
+
+.play-btn-box {
+    width: 48px;
+    height: 48px;
+
+    margin-left: 56px;
+}
+
+.play-btn-icon {
+    width: 48px;
+    height: 48px;
+
+    background-image: url(../images/play-btn.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    cursor: pointer;
+}
+
+.play-btn-icon:hover {
+    background-image: url(../images/play-btn-h.png);
+}
+
+
+
 
 
 /* ===== Paginate =====  */
@@ -2018,7 +2206,7 @@ Sub page - Lecture video
 }
 
 .v-num-info>p:first-child {
-    margin-right: 8px;
+    margin-right: 16px;
 }
 
 .v-num-info>p>span {
@@ -2174,10 +2362,32 @@ Sub page - Lecture video
 .v-side-cnt {
     grid-column: span 2;
 
+    cursor: pointer;
 }
+
+.side-cnt-pic {
+    position: relative;
+}
+
 
 .v-side-cnt > img {
     /* min-height: 90px; */
+
+}
+
+.play-btn {
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../images/play.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+
+    right: 10px;
+    bottom: 10px;
 
 }
 
@@ -2199,6 +2409,20 @@ Sub page - Lecture video
     margin: auto 0;
 }
 
+.v-side-cnt:hover .side-cnt-tit {
+    
+    font-weight: 500;
+}
+
+/* .v-side-cnt:hover .side-cnt-pic .play-btn {
+    background-image: url(../images/play-h.png);
+
+} */
+
+.v-side-cnt:hover .side-cnt-pic .play-btn {
+    background-image: url(../images/play-btn-h.png);
+
+}
 
 /* ===== Scroll bar =====  */
 
@@ -2212,19 +2436,23 @@ Sub page - Lecture video
     /* background-color: #9CA3AF; */
     /* background-color: #E5E7EB;
     background-color: rgba(0,84,166,0.5);
-    background-color: #00a4b6; */
-    background-color: #E0E0E0;
+    */
     /* background-color:  #BDBDBD; */
 
 
-    
+    /* background-color: #00a4b6;  */
+    /* background-color: rgba(0,84,166,1); */
+  
+    background-color: #9CA3AF;
 
 
     border-radius: 16px;
 } 
 
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: #E5E7EB;
+
 }
 
 
