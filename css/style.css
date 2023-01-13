@@ -55,7 +55,7 @@ GENERAL STYLING
 ================================================ */
 
 * {
-/*     outline: 1px solid rgb(223, 63, 35); */
+    outline: 1px solid rgb(223, 63, 35);
     box-sizing: border-box;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 
 .inner {
 
-/*     outline: 1px solid rgb(4, 0, 255); */
+    outline: 1px solid rgb(4, 0, 255);
     max-width: 1400px;
 
     width: 100%;
@@ -1894,6 +1894,13 @@ select::-ms-expand {
 
     padding-top: 16px;
     padding-bottom: 16px;
+    
+    cursor: pointer;
+}
+
+.sub-cnt.list-style:hover .play-btn-icon {
+    background-image: url(../images/play-btn-h.png);
+
 }
 
 .sub-cnt.list-style > img {
