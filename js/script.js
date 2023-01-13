@@ -42,10 +42,29 @@ $(document).ready(function () {
     }
   );
 
+
+  // ====== Nav - shadow ===== //
+
+  // $(window).scroll(
+  //   function () {
+
+  //   var height = $(document).scrollTop();
+
+  //   if (height >= 1) {
+  //     $("header").addClass("b-shadow");
+  //   } else {
+  //     $("header").removeClass("b-shadow");
+  //   }
+      
+  //   }); 
+  
+
+
   // ====== Notice Swiper ===== //
 
   var swiper01 = new Swiper(".mySwiper.nt-sd", {
     direction: "vertical",
+    loop : true,
 
     navigation: {
       nextEl: ".swiper-button-down",
