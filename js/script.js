@@ -102,4 +102,21 @@ $(document).ready(function () {
   });
 
 
+  // ====== Sub - btn (card/list) ===== //
+
+  $(".filter-style > button").click(function() {
+    $(this).addClass('on').siblings().removeClass('on');
+    $("#" + $(this).data('id')).addClass('on').siblings().removeClass('on');
+});
+
+
+
+  // ====== Sub - filter select ===== //
+
+
+$(".selected_item_con").click(function(){
+  $(this).find(".select_style_1_con").stop().toggle();
+});
+
+
 }); //ready end
