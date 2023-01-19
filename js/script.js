@@ -70,17 +70,23 @@ $(document).ready(function () {
       nextEl: ".swiper-button-down",
       prevEl: ".swiper-button-up",
     },
-    //   autoplay: {
-    //     delay: 1000,
-    //   },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction : false,
+        pauseOnMouseEnter : true,
+      },
   });
 
   var swiper02 = new Swiper(".mySwiper.vs-sd", {
+    loop : true,
+
     pagination: {
       el: ".swiper-pagination",
     },
     autoplay: {
       delay: 3000,
+      disableOnInteraction : false,
+      pauseOnMouseEnter : true,
     },
   });
 
@@ -91,7 +97,32 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev.n-btn-l",
     },
 
+    // allowTouchMove : true, 
+
   });
+
+  var swiper03_tab = new Swiper(".mySwiper.lt-sd-n.tab", {
+    // slidesPerView: "2",
+    // spaceBetween: 20,
+
+    allowTouchMove : true, 
+
+  });
+
+  // var swiper03_mob = new Swiper(".mySwiper.lt-sd-n.mob", {
+  //   slidesPerView: "1",
+  //   // slidesPerGroup : "4",
+
+  //   // spaceBetween: 20,
+
+  //   // grid: {
+  //   //   column: 2,
+  //   // },
+
+  //   allowTouchMove : true, 
+
+  // });
+
 
   var swiper04 = new Swiper(".mySwiper.lt-sd-p", {
     navigation: {
