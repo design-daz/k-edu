@@ -15,11 +15,15 @@
 
     <!-- Swiper@8 -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/theme.page.sub.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/theme.common.style.css">
 
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" media="all and (min-width: 770px) and (max-width: 1399px)" href="./css/style_t.css" />
-    <link rel="stylesheet" media="all and (min-width: 360px) and (max-width: 769px)" href="./css/style_m.css" />
-    
+
+    <link rel="stylesheet" type="text/css" href="./css/style-sub-select-kedu.css">
+    <!-- <link rel="stylesheet" media="all and (min-width: 744px) and (max-width: 1439px)" href="../css/style_t.css" /> -->
+    <!-- <link rel="stylesheet" media="all and (min-width: 360px) and (max-width: 743px)" href="../css/style_m.css" /> -->
+
     <!-- Font Awesome Solid + Brands -->
     <link href="./assets/fontawesome-free-6.2.0-web/css/fontawesome.min.css" rel="stylesheet">
     <link href="./assets/fontawesome-free-6.2.0-web/css/brands.min.css" rel="stylesheet">
@@ -248,78 +252,72 @@
 
 
 
-            <div class="col-12 filter">
-                <!-- <div class=" "> -->
+            <div class="col-12">
+                <div class="filter flx">
 
 
-                <div class="filter-num filter-l flx">
-                    <div class="filter-style flx">
-                        <button data-id="id-card-btn" class="card-btn on" type="button">
-                            <a href="#">
+                    <div class="filter-num filter-l flx">
+                        <div class="filter-style flx">
+                            <button data-id="id-card-btn" class="card-btn on" type="button">
+                                <a href="#">
 
 
-                            </a>
-                        </button>
+                                </a>
+                            </button>
 
-                        <button data-id="id-list-btn" class="list-btn" type="button">
-                            <a href="#">
+                            <button data-id="id-list-btn" class="list-btn" type="button">
+                                <a href="#">
 
-                            </a>
+                                </a>
 
-                        </button>
+                            </button>
 
+                        </div>
+
+                        <p class="text-r-16">총 <span class="text-m-18">157</span>건</p>
                     </div>
 
-                    <p class="text-r-16">총 <span class="text-m-18">157</span>건</p>
-                </div>
+                    <div class="filter-r flx">
 
-                <div class="filter-r">
-
-
-                    <div class="f-select-box f-search-box flx">
-
-                        <div class="col-0 select_style_1_wrap select-box">
+                        <div class="col-0 select_style_1_wrap">
                             <input type="hidden" name="conditionList[1].searchCondition" value="order">
                             <select class="select_style_1" name="conditionList[1].searchKeyword" id="orderSelect"
                                 onchange="$('#searchForm').submit();" data-wv-com="selectbox" title="정렬순서"
                                 style="display: none;">
-                                <option value="all-arr" selected="">전체</option>
-                                <option value="recent">최근순</option>
+                                <option value="recent" selected="">최근순</option>
                                 <option value="popular">인기순</option>
                                 <option value="lectureNm">강좌명순</option>
                             </select>
-
-
-                            <div class="selected_item_con bm_select_box text-r-16">
-                                <div class="selected_item flx">전체
-                                    <div class="f-select-arr"></div>
-                                </div>
-                                <div class="select_style_1_con">
+                            <div class="selected_item_con bm_select_box">
+                                <div class="selected_item">최근순</div>
+                                <div class="select_style_1_con" style="display: none;">
                                     <ul class="select_style_1">
-                                        <!-- <li data-value="all-arr"><a href="#">전체</a></li> -->
-
-                                        <li data-value="recent"><a href="#">최근순</a></li>
-                                        <li data-value="popular"><a href="#">인기순</a></li>
-                                        <li data-value="lectureNm"><a href="#">강좌명순</a></li>
+                                        <li data-value="recent"><a href="javascript:void(0)">최근순</a></li>
+                                        <li data-value="popular"><a href="javascript:void(0)">인기순</a></li>
+                                        <li data-value="lectureNm"><a href="javascript:void(0)">강좌명순</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
 
-                        <form class="filter-search flx">
-                            <input class="f-search-txt text-r-16" id="" type="text" placeholder="검색어를 입력해주세요.">
-            
-                            <input class="f-search-btn" id="" type="button" placeholder="교육 과정 검색">
-            
-                        </form>
+                        <!-- <div class="order text-r-18">
+                            <a>최신순
+                                <span class="icon-down-gr"></span>
+                            </a>
+                        </div> -->
+                        <!-- <div class="array">
+                            <select class="filter-arr text-r-18">
+                                <option value="">최근순</option>
+                                <option value="">인기순</option>
+                                <option value="">강좌명순</option>
+
+                            </select>
+                        </div> -->
 
                     </div>
 
-
                 </div>
-
-                <!-- </div> -->
 
 
 
@@ -327,17 +325,14 @@
             </div>
 
 
-            <div class="col-12">
+            <!-- <div class="col-12">
                 <div class="sub-cnt-box">
 
-                    <!-- filter style - card  -->
+                    filter style - card  
                     <div id="id-card-btn" class="col-12 row-g-56 on">
 
                         <div class="sub-cnt">
-                            <div class="sub-cnt-img">
-                                <img src="./images/sub-img-ex.png">
-                                <div class="card-play-btn"></div>
-                            </div>
+                            <img src="./images/sub-img-ex.png">
                             <p class="sub-cnt-tit text-m-18">스sadasdasdasd타sadasd트업 윤리 및sdasdasdasdada 사회적 책임</p>
 
                             <ul class="sub-cnt-txt text-r-16">
@@ -484,7 +479,7 @@
                     </div>
 
 
-                    <!-- filter style - list  -->
+                     filter style - list  
 
                     <div id="id-list-btn" class="">
 
@@ -706,7 +701,7 @@
                         </div>
 
 
-
+                        
 
                     </div>
 
@@ -734,7 +729,7 @@
 
 
 
-            </div>
+            </div> -->
         </div>
 
 
@@ -828,6 +823,8 @@
 
         <script src="./assets/fontawesome-free-6.2.0-web/js/brands.min.js"></script>
         <script src="./assets/fontawesome-free-6.2.0-web/js/solid.min.js"></script>
+
+        <script src="./js/BMSelectBox.js"></script>
 
         <script src="./js/script.js"></script>
 </body>
